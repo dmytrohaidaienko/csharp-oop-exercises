@@ -15,8 +15,19 @@ namespace exercise_1
 
     internal class Program
     {
+        abstract class Animal
+        {
+
+        }
+
+        class Dog : Animal
+        {
+
+        }
+
         static void Main(string[] args)
         {
+
         }
     }
 }
