@@ -17,17 +17,26 @@ namespace exercise_1
     {
         abstract class Animal
         {
-
+            public virtual String Eat()
+            {
+                return "Bone";
+            }
         }
 
         class Dog : Animal
         {
-
+            public override String Eat()
+            {
+                return base.Eat();
+            }
         }
 
         static void Main(string[] args)
         {
+            Dog dog = new Dog();
+            String result = dog.Eat();
 
+            Console.WriteLine(result);
         }
     }
 }
