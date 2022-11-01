@@ -16,11 +16,41 @@ namespace exercise_3
     Курс вычисляется так: нужно от текущего года отнять год поступления в вуз. Текущий год получите самостоятельно.
     */
 
+    class User
+    {
+        public String Name { get; set; }
+        public String Surname { get; set; }
+        public Int32 Year { get; set; }
+
+        public void getFullName()
+        {
+            Console.WriteLine($" Fullname: {Name} {Surname}");
+        }
+
+        public void getCourse()
+        {
+            Console.WriteLine($" Course: {2022 - Year}");
+        }
+    }
+
+    class Student : User
+    {
+
+    }
+
     internal class Program
     {
         static void Main(string[] args)
         {
+            Student student = new Student()
+            {
+                Name = "Dmytro",
+                Surname = "Haidaienko",
+                Year = 2019
+            };
 
+            student.getFullName();
+            student.getCourse();
         }
     }
 }
