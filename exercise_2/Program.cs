@@ -17,10 +17,41 @@ namespace exercise_2
     Magician =>"Using magic!"
     */
 
+    class Unit
+    {
+        public virtual void Attack()
+        {
+            Console.WriteLine(" Using sword!");
+        }
+    }
+
+    class Musketeer : Unit
+    {
+        public override void Attack()
+        {
+            Console.WriteLine(" Using musket!");
+        }
+    }
+
+    class Magician : Unit
+    {
+        public override void Attack()
+        {
+            Console.WriteLine(" Using magic!");
+        }
+    }
+
     internal class Program
     {
         static void Main(string[] args)
         {
+            Unit unit = new Unit();
+            Musketeer musketeer = new Musketeer();
+            Magician magician = new Magician();
+
+            unit.Attack();
+            musketeer.Attack();
+            magician.Attack();
         }
     }
 }
