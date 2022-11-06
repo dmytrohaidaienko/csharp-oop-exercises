@@ -24,10 +24,38 @@ namespace exercise_6
     Balance: 1488.36
     */
 
+    class Account
+    {
+        public Double Balance { get; set; }
+    }
+
+    class User : Account
+    {
+        public User(String numbr, Double balance)
+        {
+            AccNumber = numbr;
+            Balance = balance;
+        }
+
+        public String AccNumber { get; set; }
+
+        public void ShowDetails()
+        {
+            Console.WriteLine("Account N: " + AccNumber);
+            Console.WriteLine("Balance: " + Balance);
+        }
+    }
+
     internal class Program
     {
         static void Main(string[] args)
         {
+            String numbr = Console.ReadLine();
+            Double balance = Convert.ToDouble(Console.ReadLine());
+
+            User user = new User(numbr, balance);
+
+            user.ShowDetails();
         }
     }
 }
